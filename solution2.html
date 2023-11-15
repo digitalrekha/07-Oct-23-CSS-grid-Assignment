@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution 2</title>
+    <style>
+        .container {
+            width: 50vw;
+            height: 50vh;
+            display: grid;
+            grid-template-areas: " aa aa bb"
+                "cc dd bb";
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: #ffe4c4;
+            border-radius: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item-1 {
+            grid-area: aa;
+        }
+
+        .item-2 {
+            grid-area: bb;
+        }
+
+        .item-3 {
+            grid-area: cc;
+        }
+
+        .item-4 {
+            grid-area: dd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">A</div>
+        <div class="item item-2">B</div>
+        <div class="item item-3">C</div>
+        <div class="item item-4">D</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+Q3: Explain the use of grid-auto-row and grid-auto-column using code examples.
+Ans: The grid-auto-row and grid-auto-column properties are used to specify the size of grid rows and columns that were created without having an explicit size. They are both part of the CSS Grid Layout specification, which provides a more flexible and powerful way to create grid-based layouts.
+Example:
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 150px;
+}
+In above example, the grid-template-columns property defines two columns, each with a width of 1fr. The grid-auto-rows property sets the size of all rows to 150px. This means that if there are more than two items in the grid, the CSS Grid layout algorithm will create additional rows to accommodate them.
+
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-columns: 200px;
+}
+In this example, the grid-template-rows property defines two rows, each with a height of 1fr. The grid-auto-columns property sets the size of all columns to 200px. This means that if there are more than two items in the grid, the CSS Grid layout algorithm will create additional columns to accommodate them.
+
+Q5:Explain the difference between justify-items and justify-self using code examples.
+Ans: The justify-items property sets the default alignment for all items within a grid container. It applies to all items unless they have their own justify-self property set. 
+Example: 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+In above example, the grid-template-columns property defines two columns, each with a width of 1fr. The justify-items property centers all items in both columns.
+
+The justify-self property sets the alignment for an individual item within a grid container. It overrides the justify-items property for that item.
+
+.grid-item:first-child {
+  justify-self: start;
+}
+
+In this example, the grid-template-columns property defines two columns, each with a width of 1fr. The justify-items property centers all items in both columns. However, the justify-self property on the first grid-item element overrides the justify-items property and aligns the first item to the start of the grid container.
+
+
+
+
+
+
+
+
+
+
+
+
